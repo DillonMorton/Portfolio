@@ -17,8 +17,14 @@
     });
 
     $(function() {
-        $hero.height(viewport - 10);
-
+        $hero.height(viewport - 30);
         $('.js-full-height').height(viewport);
+    });
+
+    $('a').click(function(){
+        $('html, body').animate({
+            scrollTop: $( $.attr(this, 'href') ).offset().top
+        }, 500);
+        return false;
     });
 }).call(this);
