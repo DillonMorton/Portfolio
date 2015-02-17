@@ -18,7 +18,6 @@
 
     $(function() {
         $hero.height(viewport - 30);
-        $('.js-full-height').height(viewport);
     });
 
     $('a').click(function(){
