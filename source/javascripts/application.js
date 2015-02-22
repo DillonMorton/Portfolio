@@ -3,6 +3,7 @@
 //= require _jquery.cycle.all
 //= require _headroom.min
 //= require _jquery.headroom
+//= require _nerdbox
 
 (function() {
     var $window = $(window);
