@@ -33,14 +33,6 @@
         
     };
 
-    // $window.scroll(function () {
-    //     if ($('#work').detectSection()) {
-    //         console.log('Visible');
-    //     } else {
-    //         console.log('Hidden');
-    //     }
-    // });
-
     $window.scroll(function () {
         $('.js-menu-section').each(function() {
             var $section = '#' + $(this).attr('id');

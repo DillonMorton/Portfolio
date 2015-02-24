@@ -131,11 +131,20 @@ body.index {
 
         	.client-list {
         		font-size: 0;
+        		text-align: center;
 
         		.client-logo {
-        			width: 20%;
+        			max-width: 200px;
+        			width: 50%;
         			display: inline-block;
-        			padding: 0 30px;
+        			padding: 0 15px;
+        			margin-bottom: 30px;
+
+        			@include screen-md() {
+            			width: 20%;
+            			padding: 0 30px;
+            			margin-bottom: 0;
+            		}
 
         			a {
         				display: inline-block;
@@ -187,8 +196,12 @@ body.index {
 				font-size: 0;
 
 				li {
-					display: inline-block;
-					padding: 0 15px;
+					display: block;
+					padding: 15px;
+
+					@include screen-sm() {
+            			display: inline-block;
+            		}
 
 					a {
 						display: inline-block;
