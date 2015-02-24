@@ -1,17 +1,11 @@
 //= require jquery
 //= require bootstrap
-//= require _jquery.cycle.all
-//= require _headroom.min
-//= require _jquery.headroom
-//= require _nerdbox
 
 (function() {
     var $window = $(window);
     var $hero = $('.hero');
     var $navbar = $('.navbar');
     var viewport = $window.height();
-
-    $('.headroom').headroom();
 
     $('.navbar-toggle').click(function(){
         $('.nav-primary').toggleClass('hamburger-open');

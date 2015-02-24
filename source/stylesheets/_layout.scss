@@ -11,7 +11,132 @@ body {
 a {
     color: #000;
 
-    &:hover {
-        text-decoration: underline;
+    &:hover,
+    &:active,
+    &:visited {
+        text-decoration: none;
+    }
+}
+
+body.work {
+
+    .nav-primary,
+    .nav-side {
+        display: none;
+    }
+
+    .work-piece {
+        position: relative;
+
+        .work-piece-header {
+            position: absolute;
+            top: 30px;
+            right: 0;
+            left: 0;
+            letter-spacing: 1px;
+            color: #000;
+            border: 0;
+            margin-bottom: 0;
+            @include transition(all 0.4s);
+
+            .work-piece-title {
+                font-family: $font-family-serif;
+                display: inline-block;
+                position: relative;
+                color: #000;
+                font-size: 32px;
+                line-height: 32px;
+                background: #fff;
+                padding: 14px 20px 14px 0;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 9999px;
+                    top: 0;
+                    right: 100%;
+                    background: #fff;
+                }
+            }
+        }
+
+        .back {
+            position: fixed;
+            top: 30px;
+            right: 0;
+            background: #fff;
+            font-size: 30px;
+            line-height: 1px;
+            text-align: center;
+            padding: 15px;
+            transition: opacity 0.2s ease;
+            opacity: 1;
+
+            img {
+                height: 30px;
+                width: 30px;
+            }
+
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+
+        img {
+            width: 100%;
+        }
+
+        &:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            z-index: 1;
+            pointer-events: none;
+            border-color: rgba(255, 255, 255, 0);
+            border-top-color: #ffffff;
+            border-width: 12px;
+            margin-left: -12px;
+        }
+    }
+
+    .work-piece-footer {
+        background: #000;
+        padding: 90px 0;
+        color: #fff;
+
+        .visit {
+            float: right;
+            position: relative;
+            font-size: 22px;
+            text-transform: uppercase;
+            font-weight: 700;
+            line-height: 32px;
+            background: #fff;
+            padding: 14px 0 14px 20px;
+
+            &:hover {
+                color: #000;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 9999px;
+                top: 0;
+                left: 100%;
+                background: #fff;
+            }
+        }
+
+        .description {
+            font-size: 16px;
+            width: 75%;
+        }
     }
 }

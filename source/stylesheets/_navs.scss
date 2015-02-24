@@ -118,11 +118,15 @@
             }
 
             &:hover {
-                text-decoration: none;
-
                 &:after {
                     background: #bfbfbf;
                 }
+            }
+
+            &:hover,
+            &:active,
+            &:visited {
+                text-decoration: none;
             }
 
             &.active {

@@ -1,0 +1,23 @@
+<% wrap_layout :layout do %>
+    <section class="work-piece">
+        <div class="work-piece-header">
+            <div class="container">
+                <div class="work-piece-title">
+                    <%= current_page.data.title %>
+                </div>
+            </div>
+        </div>
+        <a href="/#work" class="back"><img src="/images/icons/close.jpg"></a>
+        <%= yield %>
+    </section>
+    <div class="work-piece-footer">
+        <div class="container">
+            <a class="visit" href="<%= current_page.data.url %>" title="<%= current_page.data.title %>" target="_blank">
+                View Project
+            </a>
+            <div class="description">
+                <%= current_page.data.description %>
+            </div>
+        </div>
+    </div>
+<% end %>
