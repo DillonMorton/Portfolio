@@ -7,10 +7,6 @@
     var $navbar = $('.navbar');
     var viewport = $window.height();
 
-    $('.navbar-toggle').click(function(){
-        $('.nav-primary').toggleClass('hamburger-open');
-    });
-
     $(function() {
         $hero.height(viewport - 30);
     });
@@ -20,5 +16,40 @@
             scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 500);
         return false;
+    });
+
+    $.fn.detectSection = function(){
+            
+        var screen = {
+            top : $window.scrollTop(),
+        };
+
+        screen.bottom = screen.top + (viewport / 2);
+        
+        var bounds = this.offset();
+        bounds.bottom = bounds.top + (this.outerHeight() / 2);
+        
+        return (!(screen.bottom < bounds.top || screen.top > bounds.bottom));
+        
+    };
+
+    // $window.scroll(function () {
+    //     if ($('#work').detectSection()) {
+    //         console.log('Visible');
+    //     } else {
+    //         console.log('Hidden');
+    //     }
+    // });
+
+    $window.scroll(function () {
+        $('.js-menu-section').each(function() {
+            var $section = '#' + $(this).attr('id');
+            var $sectionLink = $('.nav-list a[href$="' + $section + '"]');
+
+            if ($($section).detectSection()) {
+                $('.nav-list a').removeClass('active');
+                $($sectionLink).addClass('active');
+            };
+        });
     });
 }).call(this);
