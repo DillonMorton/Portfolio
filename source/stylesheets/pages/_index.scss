@@ -130,8 +130,10 @@ body.index {
         	}
 
         	.client-list {
+        		font-size: 0;
+
         		.client-logo {
-        			width: 19.6%;
+        			width: 20%;
         			display: inline-block;
         			padding: 0 30px;
 
@@ -178,8 +180,49 @@ body.index {
 			@include vertical-align;
 
 			ul {
+				display: block;
+				margin: 0 auto;
 				list-style: none;
 				padding: 0;
+				font-size: 0;
+
+				li {
+					display: inline-block;
+					padding: 0 15px;
+
+					a {
+						display: inline-block;
+						height: 60px;
+						width: 60px;
+						text-indent: -9999px;
+						opacity: 1;
+        				transition: opacity 0.25s;
+
+        				&:hover {
+        					opacity: 0.5;
+        				}
+
+						&.social-email {
+							background: url('/images/icons/email.png');
+							background-size: 60px 60px;
+						}
+
+						&.social-github {
+							background: url('/images/icons/github.png');
+							background-size: 60px 60px;
+						}
+
+						&.social-dribbble {
+							background: url('/images/icons/dribbble.png');
+							background-size: 60px 60px;
+						}
+
+						&.social-linkedin {
+							background: url('/images/icons/linkedin.png');
+							background-size: 60px 60px;
+						}
+					}
+				}
 			}
 		}
     }
