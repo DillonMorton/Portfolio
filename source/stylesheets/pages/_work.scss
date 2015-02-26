@@ -125,4 +125,10 @@ body.work {
     		}
         }
     }
+
+    &.work_other-work {
+        .work-piece-footer .visit {
+            display: none;
+        }
+    }
 }
