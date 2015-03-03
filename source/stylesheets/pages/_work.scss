@@ -67,6 +67,20 @@ body.work {
             width: 100%;
         }
 
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 57%;
+        }
+        .video-iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
         &:after {
             top: 100%;
             left: 50%;
@@ -129,6 +143,13 @@ body.work {
     &.work_other-work {
         .work-piece-footer .visit {
             display: none;
+        }
+
+        .description {
+
+            @include screen-sm() {
+                width: 100%;
+            }
         }
     }
 }

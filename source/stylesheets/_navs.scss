@@ -7,7 +7,7 @@
 }
 
 .nav-primary {
-    position: fixed;
+    position: absolute;
     top: 30px;
     right: 0;
     left: 0;
@@ -17,6 +17,10 @@
     border: 0;
     margin-bottom: 0;
     @include transition(all 0.4s);
+
+    @include screen-sm() {
+        position: fixed;
+    }
 
     .logo {
         font-family: $font-family-serif;
