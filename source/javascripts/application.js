@@ -23,21 +23,19 @@
     });
 
     $.fn.detectSection = function(){
-            
         var screen = {
             top : $(window).scrollTop(),
         };
 
         screen.bottom = screen.top + (viewport / 2);
-        
+
         var bounds = this.offset();
         bounds.bottom = bounds.top + (this.outerHeight() / 2);
-        
+
         return (!(screen.bottom < bounds.top || screen.top > bounds.bottom));
-        
     };
 
-    $window.scroll(function () {
+    $(window).bind("scroll load", function () {
         $('.js-menu-section').each(function() {
             var $section = '#' + $(this).attr('id');
             var $sectionLink = $('.nav-list a[href$="' + $section + '"]');
