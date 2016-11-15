@@ -10,8 +10,7 @@ body.work {
 
         .work-piece-header {
             position: relative;
-            padding: 30px 0 60px;
-            letter-spacing: 1px;
+            padding: 70px 0 90px;
             color: #000;
             border: 0;
             margin-bottom: 0;
@@ -23,6 +22,7 @@ body.work {
                 color: #000;
                 font-size: 32px;
                 line-height: 32px;
+                letter-spacing: 1px;
                 text-align: center;
                 background: #fff;
                 padding: 14px 0;
@@ -31,11 +31,11 @@ body.work {
             .description {
                 margin: 25px auto 0;
                 font-size: 13px;
-                max-width: 500px;
+                max-width: 550px;
 
                 .website {
                     display: block;
-                    margin: 25px 0;
+                    margin: 30px 0;
                     text-decoration: underline;
                     text-align: center;
                 }
@@ -66,7 +66,7 @@ body.work {
                 border-color: rgba(255, 255, 255, 0);
                 border-top-color: #fff;
                 border-width: 12px;
-                margin-left: 0;
+                margin-left: -12px;
             }
         }
 
@@ -81,6 +81,7 @@ body.work {
             padding: 15px;
             transition: opacity 0.2s ease;
             opacity: 1;
+            z-index: 1;
 
             img {
                 height: 30px;
@@ -182,6 +183,173 @@ body.work {
 
             @include screen-sm() {
                 width: 100%;
+            }
+        }
+    }
+
+    .case-study-header {
+        padding-top: 60px;
+        background: #f8e2e2;
+
+        .container {
+            position: relative;
+        }
+
+        .case-study-title {
+            position: relative;
+            font-family: $font-family-sans-serif;
+            margin-top: 60px;
+
+            strong {
+                position: relative;
+                z-index: 1;
+                font-weight: 800;
+                font-size: 24px;
+                text-transform: uppercase;
+            }
+
+            .case-study-name {
+                display: block;
+                position: relative;
+                font-size: 17px;
+                z-index: 1;
+            }
+
+            .case-study-number {
+                position: absolute;
+                top: -25px;
+                left: 0;
+                font-family: $font-family-serif;
+                color: #fff;
+                font-size: 120px;
+                line-height: 1;
+                opacity: 0.5;
+                z-index: 0;
+                @include transform(translateX(-50%));
+            }
+        }
+
+        .case-study-description {
+            margin-top: 30px;
+            font-size: 13px;
+
+            strong {
+                display: block;
+                margin-bottom: 7px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+
+            &:last-child {
+                margin-bottom: 120px;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .case-study-image {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            max-height: 100%;
+            padding-right: 15px;
+            overflow: hidden;
+
+            img {
+                max-height: 100%;
+            }
+        }
+    }
+
+    .case-study-step {
+        padding: 0 0 240px;
+        overflow: hidden;
+
+        @include screen-md() {
+            padding: 120px 0;
+        }
+
+        img {
+            position: relative;
+            padding-bottom: 120px;
+            z-index: 2;
+
+            @include screen-md() {
+                padding-bottom: 0;
+            }
+        }
+
+        .step-info {
+            position: relative;
+            padding-left: 30px;
+            margin-left: 30px;
+
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                display: inline-block;
+                margin-left: -35px;
+                margin-top: 19px;
+                height: 11px;
+                width: 11px;
+                border-radius: 50%;
+                border: 2px solid #000;
+                background: #fff;
+                transition: all 0.4s;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                display: inline-block;
+                height: 9999px;
+                width: 2px;
+                top: -105px;
+                left: 0;
+                background: #bfbfbf;
+                opacity: 0.2;
+
+                @include screen-md() {
+                    top: -50%;
+                }
+            }
+
+            h3 {
+                font-weight: 800;
+                font-size: 18px;
+                text-transform: uppercase;
+                margin-top: -17px;
+            }
+        }
+
+        &:first-child {
+            padding: 120px 0 240px;
+
+            @include screen-md() {
+                padding: 120px 0;
+            }
+
+            .step-info:after {
+                @include screen-md() {
+                    top: 26px;
+                }
+            }
+        }
+
+        &:last-child {
+            padding: 0 0 120px;
+
+            @include screen-md() {
+                padding: 120px 0;
+            }
+
+            .step-info:after {
+                top: -120px;
+                height: 140px;
             }
         }
     }
