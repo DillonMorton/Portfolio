@@ -1,6 +1,5 @@
 //= require jquery
 //= require bootstrap
-//= require _jquery.fittext
 
 (function() {
     var $window = $(window);
@@ -11,8 +10,7 @@
 
     $(function() {
         $hero.height(viewport - 30);
-        $('.js-full-height').height(viewport);
-        $('.about-content').height((viewport / 2) - 30 + ($('.bio').height() / 2));
+        $('.js-full-height').height(viewport - 30);
     });
 
     $('a').click(function(){
@@ -46,6 +44,4 @@
             };
         });
     });
-
-    $('.js-fittext').fitText(1.2, { minFontSize: '45px' });
 }).call(this);

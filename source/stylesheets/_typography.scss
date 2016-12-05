@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Abril Text Regular';
+    src: url('/fonts/Abril_Text_Regular.eot');
+    src: url('/fonts/Abril_Text_Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/Abril_Text_Regular.woff') format('woff'),
+    url('/fonts/Abril_Text_Regular.ttf')  format('truetype'),
+    url('/fonts/Abril_Text_Regular.svg#svgFontName') format('svg');
+}
+
 h1,
 h2,
 h3,
