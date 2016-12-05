@@ -16,6 +16,7 @@
     color: #000;
     border: 0;
     margin-bottom: 0;
+    pointer-events: none;
     @include transition(all 0.4s);
 
     @include screen-sm() {
@@ -31,6 +32,7 @@
         line-height: 32px;
         background: #fff;
         padding: 14px 20px 14px 0;
+        pointer-events: auto;
 
         &:hover {
             text-decoration: none;

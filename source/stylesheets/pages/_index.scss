@@ -5,15 +5,15 @@ body.index {
 
 		.video-background {
 			position: fixed;
-  			top: 0;
-  			right: 0;
-  			bottom: 0;
-  			left: 0;
-  			overflow: hidden;
-  			z-index: -100;
-  			background: url('/videos/background.jpg');
-  			background-size: cover;
-  			background-position: center center;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			overflow: hidden;
+			z-index: -100;
+			background: url('/videos/background.jpg');
+			background-size: cover;
+			background-position: center center;
 
 			video {
 				position: absolute;
@@ -26,18 +26,18 @@ body.index {
 
 		/* 1. No object-fit support: */
 		@media (min-aspect-ratio: 16/9) {
-		  .video-background > video { height: 300%; top: -100%; }
+			.video-background > video { height: 300%; top: -100%; }
 		}
 		@media (max-aspect-ratio: 16/9) {
-		  .video-background > video { width: 300%; left: -100%; }
+			.video-background > video { width: 300%; left: -100%; }
 		}
 		/* 2. If supporting object-fit, overriding (1): */
 		@supports (object-fit: cover) {
-		  .video-background > video {
-		    top: 0; left: 0;
-		    width: 100%; height: 100%;
-		    object-fit: cover;
-		  }
+			.video-background > video {
+				top: 0; left: 0;
+				width: 100%; height: 100%;
+				object-fit: cover;
+			}
 		}
 
 		.full-fade {
@@ -67,18 +67,18 @@ body.index {
 		font-size: 20px;
 		border-bottom: 12px solid #fff;
 
-    	.bio {
-    		font-family: 'Abril Text Regular';
-    		position: relative;
-    		z-index: 1;
-    		font-weight: 600;
-    		padding: 60px 0;
-    	}
+			.bio {
+				font-family: 'Abril Text Regular';
+				position: relative;
+				z-index: 1;
+				font-weight: 600;
+				padding: 60px 0;
+			}
 
-    	span {
-    		font-size: 28px;
-    		line-height: 1;
-    	}
+			span {
+				font-size: 28px;
+				line-height: 1;
+			}
 
 			strong {
 			font-family: $font-family-serif;
@@ -89,47 +89,47 @@ body.index {
 			@include screen-md() {
 				text-shadow: 0px 4px 0px rgba(255, 255, 255, 1);
 			}
-    }
+		}
 
-    	p {
+			p {
 				margin-bottom: 0;
 				max-width: 400px;
 				font-size: 16px;
 				line-height: 1.5;
-    	}
+			}
 
-    	.bottom-bar {
-    		position: fixed;
-    		z-index: 10;
-    		bottom: 0;
-    		left: 0;
-    		right: 0;
-    		height: 30px;
-    		width: 100%;
-    		border-bottom: 18px solid #000;
+			.bottom-bar {
+				position: fixed;
+				z-index: 10;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 30px;
+				width: 100%;
+				border-bottom: 18px solid #000;
 
-    		&:after {
-    			content: '';
-    			position: absolute;
-    			background: #000;
-    			width: 50%;
-    			height: 30px;
-    			left: -12px;
-    		}
+				&:after {
+					content: '';
+					position: absolute;
+					background: #000;
+					width: 50%;
+					height: 30px;
+					left: -12px;
+				}
 
-    		&:before {
-    			content: '';
-    			position: absolute;
-    			background: #000;
-    			width: 50%;
-    			height: 30px;
-    			right: -12px;
-    		}
+				&:before {
+					content: '';
+					position: absolute;
+					background: #000;
+					width: 50%;
+					height: 30px;
+					right: -12px;
+				}
 
-    		.arrow {
-    			&:before {
-    				content: ' ';
-		    		position: fixed;
+				.arrow {
+					&:before {
+						content: ' ';
+						position: fixed;
 						bottom: 18px;
 						left: 50%;
 						border: solid transparent;
@@ -158,16 +158,16 @@ body.index {
 						border-width: 12px;
 						margin-left: -24px;
 					}
-    		}
-    	}
+				}
+			}
 
-    	.full-fade {
-        	height: 100%;
-        	position: absolute;
+			.full-fade {
+					height: 100%;
+					position: absolute;
 			top: 0;
 			right: 0;
 			left: 0;
-        	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
+					background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjUiLz4KICAgIDxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgPC9saW5lYXJHcmFkaWVudD4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMSIgaGVpZ2h0PSIxIiBmaWxsPSJ1cmwoI2dyYWQtdWNnZy1nZW5lcmF0ZWQpIiAvPgo8L3N2Zz4=);
 			background: -moz-linear-gradient(top,  rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
 			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1)));
 			background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
@@ -175,7 +175,7 @@ body.index {
 			background: -ms-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 			background: linear-gradient(to bottom,  rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#ffffff',GradientType=0 );
-        }
+				}
 	}
 
 	.work-arrow {
@@ -207,7 +207,7 @@ body.index {
 		.arrow {
 			&:before {
 				content: ' ';
-	    		position: absolute;
+					position: absolute;
 				bottom: 0;
 				left: 50%;
 				border: solid transparent;
@@ -223,7 +223,7 @@ body.index {
 
 			&:after {
 				content: ' ';
-	    		position: absolute;
+					position: absolute;
 				bottom: 0;
 				left: 50%;
 				border: solid transparent;
@@ -246,12 +246,12 @@ body.index {
 		color: #fff;
 
 		.content {
+			overflow: hidden;
 			padding-top: 52px;
-			padding-bottom: 60px;
 
 			@include screen-sm() {
 				padding-top: 108px;
-				padding-bottom: 153px;
+				padding-bottom: 80px;
 			}
 
 			.container {
@@ -265,37 +265,65 @@ body.index {
 			}
 
 			.project-list {
-      	.project-thumb {
-      		display: block;
-      		background: #fff;
-      		border: 1px solid #000;
-      		padding: 0;
+				@include screen-sm() {
+					margin: 0 -30px;
+				}
 
-      		img {
-      			width: 100%;
-      			height: auto;
-      			opacity: 1;
-      			transition: opacity 0.25s;
+				.project-thumb {
+					position: relative;
+					overflow: hidden;
+					display: block;
+					background: #fff;
+					padding: 0;
+					margin: 0 30px 60px;
 
-      			&:first-child {
-      				position: absolute;
-      				opacity: 0;
-      			}
-      		}
+					@include screen-sm() {
+						margin: 0;
+						border: 30px solid #000;
+						border-top: 0;
+						border-bottom: 60px solid #000;
+					}
 
-      		&:hover {
-      			img {
-      				opacity: 0.2;
+					.project-title {
+						position: absolute;
+						bottom: 0;
+						background: rgba(255, 255, 255, 0.9);
+						width: 100%;
+						padding: 15px;
+						font-size: 13px;
 
-      				&:first-child {
-      					opacity: 1;
-      				}
-      			}
-      		}
-      	}
-      }
+						strong {
+							display: block;
+							font-size: 17px;
+						}
+					}
 
-      h3 {
+					img {
+						width: 100%;
+						height: auto;
+						opacity: 1;
+						transition: opacity 0.25s;
+
+						&:first-child {
+							position: absolute;
+							opacity: 0;
+							bottom: 40px;
+						}
+					}
+
+					&:hover {
+						img {
+							opacity: 0.2;
+
+							&:first-child {
+								opacity: 1;
+							}
+						}
+					}
+				}
+			}
+
+			h3 {
 				margin: 0 0 60px;
 				display: inline-block;
 				width: 100%;
@@ -303,43 +331,43 @@ body.index {
 				line-height: 1;
 				font-weight: 700;
 				color: #fff;
-    		text-transform: uppercase;
-    	}
+				text-transform: uppercase;
+			}
 
-    	.client-list {
-    		font-size: 0;
-    		text-align: center;
+			.client-list {
+				font-size: 0;
+				text-align: center;
 
-    		.client-logo {
-    			max-width: 200px;
-    			width: 50%;
-    			display: inline-block;
-    			padding: 0 15px;
-    			margin-bottom: 30px;
+				.client-logo {
+					max-width: 200px;
+					width: 50%;
+					display: inline-block;
+					padding: 0 15px;
+					margin-bottom: 30px;
 
-    			@include screen-md() {
-      			width: 20%;
-      			padding: 0 30px;
-      			margin-bottom: 0;
-      		}
+					@include screen-md() {
+						width: 20%;
+						padding: 0 30px;
+						margin-bottom: 0;
+					}
 
-    			a {
-    				display: inline-block;
-    				opacity: 1;
-    				transition: opacity 0.25s;
+					a {
+						display: inline-block;
+						opacity: 1;
+						transition: opacity 0.25s;
 
-    				&:hover {
-    					opacity: 0.5;
-    				}
-    			}
+						&:hover {
+							opacity: 0.5;
+						}
+					}
 
-    			img {
-    				width: 80%;
-    				height: auto;
-    			}
-    		}
-    	}
-  	}
+					img {
+						width: 80%;
+						height: auto;
+					}
+				}
+			}
+		}
 
 		&:after {
 			top: 100%;
@@ -356,11 +384,11 @@ body.index {
 			border-width: 12px;
 			margin-left: -12px;
 		}
-  }
+	}
 
-  .contact {
-  	position: relative;
-  	z-index: 20;
+	.contact {
+		position: relative;
+		z-index: 20;
 		background: #fff;
 
 		.content {
@@ -379,8 +407,8 @@ body.index {
 					padding: 15px;
 
 					@include screen-sm() {
-      			display: inline-block;
-      		}
+						display: inline-block;
+					}
 
 					a {
 						display: inline-block;
@@ -388,11 +416,11 @@ body.index {
 						width: 60px;
 						text-indent: -9999px;
 						opacity: 1;
-    				transition: opacity 0.25s;
+						transition: opacity 0.25s;
 
-    				&:hover {
-    					opacity: 0.5;
-    				}
+						&:hover {
+							opacity: 0.5;
+						}
 
 						&.social-email {
 							background: url('/images/icons/email.png');
@@ -417,5 +445,5 @@ body.index {
 				}
 			}
 		}
-  }
+	}
 }
