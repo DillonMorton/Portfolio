@@ -13,8 +13,7 @@
                     </a>
                 </div>
                 <div class="role">
-                    <%= current_page.data.roles %>
-                    <!-- <span>User Experience</span>, <span>User Interface Design</span>, & <span>Web Development</span> -->
+                    <strong>Scope of Work</strong> <%= current_page.data.roles %>
                 </div>
             </div>
         </div>
@@ -24,17 +23,22 @@
         <%= yield %>
     </section>
 
-    <!--
+
     <div class="work-piece-footer">
         <div class="container">
-            <a class="visit" href="<%= current_page.data.url %>" title="<%= current_page.data.title %>" target="_blank">
-                View Project
+            <a class="work-nav next" href="#" title="Next" target="_blank">
+                Next<img src="/images/icons/next.png">
             </a>
-            <div class="description">
-                <%= current_page.data.description %>
-            </div>
+
+            <a class="work-nav-back" href="/#work" title="Back to work" target="_blank">
+                Back to work
+            </a>
+
+            <a class="work-nav prev" href="#" title="Previous" target="_blank">
+                <img src="/images/icons/prev.png">Previous
+            </a>
         </div>
     </div>
-    -->
+
 
 <% end %>
