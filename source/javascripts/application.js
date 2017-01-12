@@ -1,5 +1,7 @@
 //= require jquery
 //= require bootstrap
+//= require _headroom.min
+//= require _jquery.headroom
 
 (function() {
     var $window = $(window);
@@ -44,4 +46,6 @@
             };
         });
     });
+
+    $('.headroom').headroom();
 }).call(this);

@@ -81,17 +81,30 @@ body.work {
 			line-height: 1px;
 			text-align: center;
 			padding: 15px;
-			transition: opacity 0.2s ease;
+			transition: all 0.2s ease;
 			opacity: 1;
 			z-index: 3;
 
 			img {
-				height: 30px;
-				width: 30px;
+				height: 15px;
+				width: 15px;
+
+				@include screen-sm() {
+					height: 30px;
+					width: 30px;
+				}
 			}
 
 			&:hover {
 				opacity: 0.8;
+			}
+
+			&.headroom--pinned {
+				top: 0;
+			}
+
+			&.headroom--unpinned {
+				top: -60px;
 			}
 		}
 
@@ -314,7 +327,11 @@ body.work {
 			}
 
 			&:last-child {
-				margin-bottom: 120px;
+				margin-bottom: 60px;
+
+				@include screen-sm() {
+					margin-bottom: 120px;
+				}
 
 				p {
 					margin-bottom: 0;
@@ -330,13 +347,16 @@ body.work {
 		}
 
 		.case-study-image {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: 58%;
-			max-height: 100%;
 			padding-right: 15px;
-			overflow: hidden;
+
+			@include screen-sm() {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 58%;
+				max-height: 100%;
+				overflow: hidden;
+			}
 
 			img {
 				max-height: 100%;
