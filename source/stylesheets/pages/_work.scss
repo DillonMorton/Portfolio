@@ -86,13 +86,8 @@ body.work {
 			z-index: 3;
 
 			img {
-				height: 15px;
-				width: 15px;
-
-				@include screen-sm() {
-					height: 30px;
-					width: 30px;
-				}
+				height: 30px;
+				width: 30px;
 			}
 
 			&:hover {
@@ -438,6 +433,7 @@ body.work {
 			h3 {
 				font-weight: 800;
 				font-size: 18px;
+				line-height: 2.625;
 				text-transform: uppercase;
 				margin-top: -17px;
 			}
