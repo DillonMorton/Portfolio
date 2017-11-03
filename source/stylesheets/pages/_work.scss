@@ -330,9 +330,10 @@ body.work {
 
 				p {
 					margin-bottom: 0;
+					line-height: 22.75px;
 
 					em {
-						font-size: 20px;
+						font-size: 16px;
 						font-style: normal;
 						font-weight: 600;
 						opacity: 0.7;
@@ -590,6 +591,21 @@ body.work {
 				text-transform: uppercase;
 				margin-top: -17px;
 			}
+		}
+	}
+
+	.work-web {
+		display: block;
+		margin: 0;
+		padding: 30px 0;
+		background: #fff;
+		background: -moz-linear-gradient(top, #ffffff 0%, #efefef 100%);
+		background: -webkit-linear-gradient(top, #ffffff 0%,#efefef 100%);
+		background: linear-gradient(to bottom, #ffffff 0%,#efefef 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#efefef',GradientType=0 );
+
+		@include screen-sm() {
+			padding: 120px 0;
 		}
 	}
 }

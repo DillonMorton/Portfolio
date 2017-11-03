@@ -287,7 +287,7 @@ body.index {
 					.project-title {
 						position: absolute;
 						bottom: 0;
-						background: rgba(255, 255, 255, 0.75);
+						background: rgba(255, 255, 255, 0.95);
 						width: 100%;
 						padding: 15px;
 						font-size: 13px;
@@ -313,7 +313,7 @@ body.index {
 
 					&:hover {
 						img {
-							opacity: 0.2;
+							opacity: 0.05;
 
 							&:first-child {
 								opacity: 1;
