@@ -17,19 +17,18 @@ body.work {
 			@include transition(all 0.4s);
 
 			.work-piece-title {
-				font-family: $font-family-serif;
 				display: block;
 				color: #000;
 				font-size: 32px;
 				line-height: 32px;
-				letter-spacing: 1px;
+				letter-spacing: -1px;
+				font-weight: 800;
 				text-align: center;
 				background: #fff;
 				padding: 14px 0;
 			}
 
 			.description {
-				font-family: 'Abril Text Regular';
 				margin: 25px auto 0;
 				font-size: 14px;
 				max-width: 560px;
@@ -310,10 +309,6 @@ body.work {
 			margin-top: 60px;
 			font-size: 13px;
 
-			p {
-				font-family: 'Abril Text Regular';
-			}
-
 			strong {
 				display: block;
 				margin-bottom: 7px;
@@ -396,7 +391,6 @@ body.work {
 			margin-left: 30px;
 
 			p {
-				font-family: 'Abril Text Regular';
 				font-size: 14px;
 			}
 
@@ -541,7 +535,6 @@ body.work {
 			}
 
 			p {
-				font-family: 'Abril Text Regular';
 				font-size: 14px;
 			}
 

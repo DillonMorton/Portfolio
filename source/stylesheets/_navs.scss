@@ -24,15 +24,21 @@
     }
 
     .logo {
-        font-family: $font-family-serif;
         display: inline-block;
         position: relative;
         color: #000;
-        font-size: 32px;
-        line-height: 32px;
+        font-family: "Marvin Visions Bold", serif;
+        font-size: 40px;
+        line-height: 30px;
+        font-weight: 800;
+        text-transform: uppercase;
         background: #fff;
-        padding: 14px 20px 14px 0;
+        padding: 15px 20px 15px 0;
         pointer-events: auto;
+
+        span {
+            letter-spacing: -2px;
+        }
 
         &:hover {
             text-decoration: none;

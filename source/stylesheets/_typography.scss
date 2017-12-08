@@ -1,4 +1,12 @@
 @font-face {
+    font-family: 'Marvin Visions Bold';
+    src: url('/fonts/MarvinVisions-Bold.eot');
+    src: url('/fonts/MarvinVisions-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fonts/MarvinVisions-Bold.woff') format('woff'),
+    url('/fonts/MarvinVisions-Bold.woff2') format('woff2')
+}
+
+@font-face {
     font-family: 'Abril Text Regular';
     src: url('/fonts/Abril_Text_Regular.eot');
     src: url('/fonts/Abril_Text_Regular.eot?#iefix') format('embedded-opentype'),
