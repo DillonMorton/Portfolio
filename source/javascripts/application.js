@@ -15,7 +15,7 @@
         $('.js-full-height').height(viewport - 30);
     });
 
-    $('nav-side a').click(function(){
+    $('.nav-side a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 500);
