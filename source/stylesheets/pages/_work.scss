@@ -295,7 +295,7 @@ body.work {
 				position: absolute;
 				top: -25px;
 				left: 0;
-				font-family: $font-family-serif;
+				font-family: "Marvin Visions Bold", serif;
 				color: #fff;
 				font-size: 120px;
 				line-height: 1;
@@ -328,10 +328,9 @@ body.work {
 					line-height: 22.75px;
 
 					em {
-						font-size: 16px;
 						font-style: normal;
-						font-weight: 600;
-						opacity: 0.7;
+						font-weight: 900;
+						opacity: 0.6;
 					}
 				}
 			}
@@ -371,6 +370,12 @@ body.work {
 
 			@include screen-md() {
 				margin-bottom: 0;
+			}
+
+			& + img {
+				@include screen-md() {
+					margin-top: 60px;
+				}
 			}
 		}
 
