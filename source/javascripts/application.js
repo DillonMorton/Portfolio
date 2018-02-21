@@ -15,7 +15,7 @@
         $('.js-full-height').height(viewport - 30);
     });
 
-    $('a').click(function(){
+    $('nav-side a').click(function(){
         $('html, body').animate({
             scrollTop: $( $.attr(this, 'href') ).offset().top
         }, 500);
@@ -39,8 +39,8 @@
         $('.js-menu-section').each(function() {
             var $section = '#' + $(this).attr('id');
             var $sectionLink = $('.nav-list a[href$="' + $section + '"]');
-
             if ($($section).detectSection()) {
+                $section === '#work' ? window.history.pushState({}, document.title, '/') : null;
                 $('.nav-list a').removeClass('active');
                 $($sectionLink).addClass('active');
             };
